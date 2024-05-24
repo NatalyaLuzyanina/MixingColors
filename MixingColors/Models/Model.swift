@@ -5,9 +5,6 @@
 //  Created by Natalia on 23.05.2024.
 //
 
-import Foundation
-
-
 struct Color: Decodable {
     let name: ColorName
 }

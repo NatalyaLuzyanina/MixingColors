@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,10 +12,49 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixing colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt9-OO-qBv">
+                                <rect key="frame" x="88.333333333333329" y="439" width="253.66666666666669" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="0.71611422300000005" blue="0.72631901499999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P12-7S-dYr">
+                                <rect key="frame" x="0.0" y="513" width="430" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-2p-F6Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.71611422300000005" blue="0.72631901499999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-yo-xcN">
+                                        <rect key="frame" x="107.66666666666669" y="0.0" width="107.33333333333331" height="100"/>
+                                        <color key="backgroundColor" red="0.9836482406" green="0.88983094689999997" blue="0.85226255660000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEi-Ad-LNN">
+                                        <rect key="frame" x="214.99999999999997" y="0.0" width="107.66666666666666" height="100"/>
+                                        <color key="backgroundColor" red="0.72453325989999995" green="0.86330562830000002" blue="0.83129006620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-wc-nef">
+                                        <rect key="frame" x="322.66666666666669" y="0.0" width="107.33333333333331" height="100"/>
+                                        <color key="backgroundColor" red="0.37777954339999997" green="0.74224144219999999" blue="0.73966544869999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KvA-go-uBL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.66917169089999995" green="0.59132272009999998" blue="0.85542434450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lt9-OO-qBv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0ii-MB-lNj"/>
+                            <constraint firstItem="Lt9-OO-qBv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4OC-bK-Tg3"/>
+                            <constraint firstItem="P12-7S-dYr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cRM-Cq-aj6"/>
+                            <constraint firstAttribute="trailing" secondItem="P12-7S-dYr" secondAttribute="trailing" id="cgc-q9-giU"/>
+                            <constraint firstItem="P12-7S-dYr" firstAttribute="top" secondItem="Lt9-OO-qBv" secondAttribute="bottom" constant="20" id="ebh-l5-inu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
