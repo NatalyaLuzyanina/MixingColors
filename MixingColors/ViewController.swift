@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    private var currentButtonTappedTag: Int?
+    private var tappedButtonTag: Int?
     
     @IBOutlet weak var colorOneButton: UIButton!
     @IBOutlet weak var colorTwoButton: UIButton!
@@ -19,28 +19,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var colorTwoLabel: UILabel!
     @IBOutlet weak var resultColorLabel: UILabel!
     
-    @IBAction func colorTwoButtonTapped(_ sender: UIButton) {
-        currentButtonTappedTag = sender.tag
-        showPicker()
-    }
-    
-    @IBAction func colorOneTapped(_ sender: UIButton) {
-        currentButtonTappedTag = sender.tag
+    @IBAction func colorButtonTapped(_ sender: UIButton) {
+        tappedButtonTag = sender.tag
         showPicker()
     }
     
     private func setSelectedColor(_ color: UIColor) {
-        if currentButtonTappedTag == 1 {
-            colorOneButton.backgroundColor = color
-            getNameOfColor(color: color) { colorName in
-                self.colorOneLabel.text = colorName
-            }
-            
-        } else if currentButtonTappedTag == 2 {
-            colorTwoButton.backgroundColor = color
-            getNameOfColor(color: color) { colorName in
-                self.colorTwoLabel.text = colorName
-            }
+        guard let buttonTag = tappedButtonTag else { return }
+        
+        let colorButtons = [colorOneButton, colorTwoButton]
+        let colorLabels = [colorOneLabel, colorTwoLabel]
+        
+        guard buttonTag >= 1 && buttonTag <= colorButtons.count else {
+            return
+        }
+        
+        let index = buttonTag - 1
+        let colorButton = colorButtons[index]
+        let colorLabel = colorLabels[index]
+        
+        colorButton?.backgroundColor = color
+        getNameOfColor(color: color) { colorName in
+            colorLabel?.text = colorName
         }
         
         setResultColor()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.getNameOfColor(withComponents: components) { colorName in
             DispatchQueue.main.async {
-               completion(colorName)
+                completion(colorName)
             }
         }
     }

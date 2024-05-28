@@ -60,7 +60,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="colorOneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1y-Rq-OIm"/>
+                                                            <action selector="colorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBv-I6-vFY"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -80,7 +80,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="colorTwoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEQ-tU-Wvh"/>
+                                                            <action selector="colorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egL-H9-vHC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
